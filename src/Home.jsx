@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 export default function Home() {
+  
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
 
@@ -31,7 +32,7 @@ export default function Home() {
           transition={{ duration: 1 }}
           className="border-y-4 border-black py-6"
         >
-          <h1 className="text-center text-5xl md:text-8xl font-black uppercase tracking-wider text-shadow-lg">
+          <h1 className="text-center font-manufacturing text-5xl md:text-8xl font-black  tracking-wider text-shadow-lg">
             The Kartik Verma Times
           </h1>
 
@@ -102,7 +103,7 @@ export default function Home() {
             <img
               src={imageUrl}
               alt="Sneaker"
-              className="absolute inset-0 h-full w-full object-cover"
+              className="absolute inset-2.5 h-full w-full object-cover"
               style={{
                 clipPath: hovered
                   ? `circle(90px at ${mousePos.x}px ${mousePos.y}px)`
@@ -121,20 +122,21 @@ export default function Home() {
               }}
               transition={{
                 type: "spring",
-                stiffness: 400,
-                damping: 30,
+                stiffness: 500,
+                damping: 50,
               }}
               className="
                 absolute
                 top-0
                 left-0
-                h-40
-                w-40
+                h-45
+                w-45
                 rounded-full
                 pointer-events-none
                 border
+
                 border-white/60
-                backdrop-blur-md
+                backdrop-blur-sm
                 bg-white/10
                 shadow-[0_0_40px_rgba(255,255,255,.45)]
               "
@@ -150,7 +152,7 @@ export default function Home() {
               transition={{
                 type: "spring",
                 stiffness: 500,
-                damping: 35,
+                damping: 50,
               }}
               className="
                 absolute
